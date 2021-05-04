@@ -1,0 +1,11 @@
+package Exercicios;
+
+public class Lista2Exercicio1 {
+
+	public static void main(String[] args) {
+		
+		double valorDiaria = 80.00
+		
+		
+	}
+}

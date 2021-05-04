@@ -1,0 +1,35 @@
+package variaveis;
+
+import javax.swing.JOptionPane;
+
+public class TiposDadosDesafio {
+	
+	public static void main(String[] args) {
+		/*
+		 * Capturem: Nome de um produto, valor de compra e a qtde
+		 * Sobre o valor de compra considerem um lucro de 20% para obterem o valor de venda
+		 * Calcule o total considerando o valor de venda e qtde
+		 * Sobre o total acima, calcule 22% de impostos
+		 * No final exiba:
+		 * O nome do produto
+		 * Valor de venda
+		 * O total sem impostos
+		 */
+		
+		String nome = JOptionPane.showInputDialog("Digite Nome do Produto");
+		double valorCompra = Double.parseDouble(JOptionPane.showInputDialog("Digite Valor da Compra: "));
+		int qtde = Integer.parseInt(JOptionPane.showInputDialog ("Quantidade Vendida: "));
+
+		double valorVenda = ((valorCompra * 0.20) + valorCompra);
+		double valorTotal = (valorVenda * qtde);
+		double valorImpostos = ((valorTotal * 0.22) + valorTotal);
+		
+		System.out.println("Nome do Produto.: " + nome);
+		System.out.println("Valor da Venda do Produto.: " + valorVenda);
+		System.out.println("Total sem Impostos: " + valorTotal);
+		System.out.println("Total com Impostos: " + valorImpostos);
+		
+		
+	}
+
+}
