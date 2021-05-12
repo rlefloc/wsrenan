@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="br.com.rubinhocar.modelo.Veiculo"/>
+    <fullyQualifiedTypeName name="br.com.caicai.modelo.Elevador"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="br.com.unixyz.modelo.Endereco"/>
+    <fullyQualifiedTypeName name="br.com.unixyz.modelo.Turma"/>
+    <fullyQualifiedTypeName name="br.com.unixyz.modelo.Aluno"/>
+    <fullyQualifiedTypeName name="br.com.unixyz.implementacao.ImplementarAluno"/>
+    <fullyQualifiedTypeName name="java.text.DateFormat"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="br.com.lojagama.modelo.Venda"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="br.com.lojagama.util.Magic"/>
 </qualifiedTypeNameHistroy>
