@@ -1,12 +1,33 @@
 package br.com.lojagama.modelo;
 
-public class PessoaFisica {
+public class PessoaFisica extends Cliente {
 
 	private String cpf;
 	private String rg;
 	
 	
+	public String getDocumentos() {
+		return cpf + ";" + rg;
+	}
 	
+	@Override
+	public String toString() {
+		return "PessoaFisica [cpf=" + cpf + ", rg=" + rg + ", toString()=" + super.toString() + "]";
+	}
+
+
+	public PessoaFisica(String nome, String email, String fone, Endereco endereco, String cpf2, String rg) {
+		super(nome, email, fone, endereco);
+		cpf = cpf2;
+		this.rg = rg;
+	}
+	
+	
+	public PessoaFisica() {
+		super();
+	}
+
+
 	public String getCpf() {
 		return cpf;
 	}
