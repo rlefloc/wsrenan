@@ -7,18 +7,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity // fala pro springboot que esta classe posui uam tabela correspondente ao BD
-
-@Table(name="TB_USUARIO") //identifica qual tabela esta associada com a classe
-
-
-
+@Entity // fala pro SpringBoot que esta classe possui uma tabela correspondente no BD
+@Table(name="TB_USUARIO") // identifica qual é a tabela que estará associada com a classe Usuario
 public class Usuario {
 	
-	@Id //avisa o springboot que esta coluna eh a chave primaria da tabela
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //Identity = representa o auto incremento do BD
-	
-	
+	@Id // avisa o springboot que esta coluna é a chave primária da tabela
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // Identity => representa o auto incremento do BD
 	@Column(name="id")
 	private int id;
 	
@@ -31,8 +25,17 @@ public class Usuario {
 	@Column(name="senha", length=20)
 	private String senha;
 	
-	@Column(name="foto",length=100)
+	@Column(name="foto", length=100)
 	private String foto;
+	
+	
+	
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", foto=" + foto
+				+ "]";
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -73,11 +76,6 @@ public class Usuario {
 	}
 	public Usuario() {
 		super();
-	}
-	@Override
-	public String toString() {
-		return "Usuario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", foto=" + foto
-				+ "]";
 	}
 	
 	
