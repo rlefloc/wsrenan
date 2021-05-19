@@ -1,11 +1,17 @@
 package br.com.itau.modelo;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="TB_ARTISTA")
@@ -22,13 +28,28 @@ public class Artista {
 	@Column(name="estilo",length=20)
 	private String estilo;
 	
+	@OneToMany(mappedBy="artista", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties("artista")
+	private List<Musica> musicas;
+	
+	
 	
 	
 	
 	@Override
 	public String toString() {
-		return "Artirta [id=" + id + ", nomeArtistico=" + nomeArtistico + ", nacionalidade=" + nacionalidade
-				+ ", estilo=" + estilo + "]";
+		return "Artista [id=" + id + ", nomeArtistico=" + nomeArtistico + ", nacionalidade=" + nacionalidade
+				+ ", estilo=" + estilo + ", musicas=" + musicas + "]";
+	}
+
+
+	public List<Musica> getMusicas() {
+		return musicas;
+	}
+
+
+	public void setMusicas(List<Musica> musicas) {
+		this.musicas = musicas;
 	}
 
 
